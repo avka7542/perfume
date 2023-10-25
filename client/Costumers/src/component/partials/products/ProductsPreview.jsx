@@ -101,7 +101,7 @@ function ProductsPreview({ products }) {
         <AccordionIcon />
       </AccordionButton>
     </h2>
-    <AccordionPanel pb={4}>
+    <AccordionPanel pb={5}>
    {item.product_description}
     </AccordionPanel>
   </AccordionItem>
