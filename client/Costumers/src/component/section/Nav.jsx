@@ -158,7 +158,7 @@ function Nav() {
           
           
           <Flex flex={'40%'} justifyContent={'right'}  alignItems={'center'} height={'60px'} >
-            {isAuthenticated?<Link to={"/shopping cart"} onClick={() => saveCurrentPage('shopping cart')}><Button bgColor={'rgb(106, 201, 158)'}><BsCartCheck  size={27}/></Button></Link>:<Link to={"/"}><Button display={'none'} bgColor={'rgb(164, 149, 178)'}><BsCartCheck color="white"  size={27} /></Button></Link>}
+            {isAuthenticated?<Link to={"/shopping cart"} onClick={() => saveCurrentPage('shopping cart')}><Button colorScheme="teal"><BsCartCheck  size={27}/></Button></Link>:<Link to={"/"}><Button display={'none'} colorScheme="teal"><BsCartCheck color="white"  size={27} /></Button></Link>}
             
           
             {isAuthenticated?<Link  to= {"/"}>

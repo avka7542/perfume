@@ -5,20 +5,21 @@ import {
   createRoutesFromElements,
   Outlet
 } from 'react-router-dom'
-import { Box, Image } from '@chakra-ui/react'
+import { Box, Button, Image } from '@chakra-ui/react'
 import Products from './pages/privatePages/home/Products';
 import Nav from './component/section/Nav';
 import Footer from './component/section/Footer';
 import ContectUs from './pages/privatePages/contect-us/ContectUs';
 import Login from './pages/publicPages/Login';
 import PrivateRoutes from './utils/PrivateRoutes';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from './context/AuthContext';
 import AboutUs from './pages/privatePages/about-us/AboutUs';
 import Categories from './pages/privatePages/categories/Categories';
 import UserForm from './component/partials/users/UserForm';
 import LoginForm from './pages/publicPages/LoginForm';
 import ShoppingCart from './component/common/ShoppingCart';
+import Paypal from './component/common/Paypal';
 
 
 
@@ -37,6 +38,7 @@ function Root(){
 function App() {
 
   const { isAuthenticated } = useContext(AuthContext);
+ 
 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -61,6 +63,8 @@ function App() {
 
   return (
     <>
+   
+
     <RouterProvider router={router} />
     </>
   )

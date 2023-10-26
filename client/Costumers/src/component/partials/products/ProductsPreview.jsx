@@ -112,7 +112,7 @@ function ProductsPreview({ products }) {
           </Text>
           
           <Box display={ !item.product_onsale && "none"} color={'white'}
-               fontSize={30}
+               fontSize={23}
                bg={'red.500'}>
                 {`ONSALE ${item.product_onsale}% OFF `}
            </Box>
@@ -122,10 +122,7 @@ function ProductsPreview({ products }) {
       <Divider />
       <CardFooter>
         <ButtonGroup spacing='2'>
-          <Button variant='solid' colorScheme='blue'>
-            Buy now
-          </Button>
-          <Button variant='ghost' colorScheme='messenger' onClick={() => addToCart(item)}>
+          <Button  colorScheme='teal' onClick={() => addToCart(item)}>
             Add to cart
           </Button>
         </ButtonGroup>

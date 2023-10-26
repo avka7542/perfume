@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext,useState } from 'react';
 import { AuthContext } from "../../context/AuthContext";
 import {
   Box,
@@ -7,9 +7,12 @@ import {
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
+import Paypal from './Paypal';
+
 
 const ShoppingCart = () => {
   const { cart, setCart, setTotalPrice, totalPrice } = useContext(AuthContext);
+  const [checkOut , setCheckOut] = useState(false)
 
 console.log(totalPrice)
 
@@ -52,6 +55,12 @@ console.log(totalPrice)
       <Text fontSize='2xl' mt={4}>
         Total Price: ${totalPrice.toFixed(2)}
       </Text>
+      <Box display={"flex"} justifyContent={'center'} marginTop={10}>
+      {checkOut? <Paypal/> :
+      <Button onClick={()=> setCheckOut(true)} colorScheme='teal'>
+      Pay On Paypal
+      </Button>}
+      </Box>
     </Box>
   );
 };

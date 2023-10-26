@@ -106,10 +106,7 @@ function CategoriesPreview({ products }) {
       <Divider />
       <CardFooter>
         <ButtonGroup spacing='2'>
-          <Button variant='solid' colorScheme='blue'>
-            Buy now
-          </Button>
-          <Button  variant='ghost' colorScheme='messenger' onClick={() => addToCart(item)}>
+          <Button  colorScheme='teal' onClick={() => addToCart(item)}>
             Add to cart
           </Button>
         </ButtonGroup>
