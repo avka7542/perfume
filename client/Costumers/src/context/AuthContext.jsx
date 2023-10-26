@@ -18,6 +18,7 @@ export default function AuthContextProvider({ children }) {
   const [searchInput, setSearchInput] = useState(false)
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [errorMessage, setErrorMessage] = useState("")
 
   const login = async (loginDetails) => {
     try {
@@ -42,8 +43,8 @@ export default function AuthContextProvider({ children }) {
         setIsLoading(false)
     } catch (error) {
       setIsLoading(false)
-      console.log(error)
-       
+      console.log(error.response.data.message)
+      setErrorMessage("Login failed. Please check your details!")
     }
   };
 
@@ -87,7 +88,8 @@ export default function AuthContextProvider({ children }) {
     cart,
     setCart,
     totalPrice,
-    setTotalPrice
+    setTotalPrice,
+    errorMessage
 
   }
 

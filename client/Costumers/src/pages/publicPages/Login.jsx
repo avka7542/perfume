@@ -12,7 +12,7 @@ import { useCookies } from 'react-cookie'
 function Login() {
 
 
-  const {isLoading,login,isAuthenticated,setIsAuthenticated} = useContext(AuthContext);
+  const {isLoading,login,isAuthenticated,setIsAuthenticated,errorMessage} = useContext(AuthContext);
   const [cookies] = useCookies();
 
 
@@ -78,6 +78,9 @@ function Login() {
         </Button>
       </ButtonGroup>
       {isLoading && <Spinner color="red.500" />}
+      {errorMessage && (
+          <p style={{ color: "red",fontSize:'18px' }} >{errorMessage}</p>
+        )}
     </VStack>
   </Formik>
 

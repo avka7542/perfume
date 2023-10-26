@@ -30,7 +30,7 @@ import { AuthContext } from "../../../context/AuthContext";
 function ProductsPreview({ products }) {
 
   const [currentPage,setCurrentPage] = useState(1);
-  const [productPerPage] = useState(8)
+  const [productPerPage] = useState(10)
   const [dataProducts, setDataProducts] = useState([...products])
  
 
@@ -74,7 +74,7 @@ function ProductsPreview({ products }) {
         spacing={5}
         p={5}>
     
-     {dataProducts.map((item,index)=> (
+     {currentProducts.map((item,index)=> (
       <Box key={index} h={'100%'} boxShadow={'dark-lg'} >
       <Card  h={'100%'}   textAlign={'center'} >
         <Heading h={50} padding={3} textAlign={'center'} fontSize={'xl'}>{item.product_name} </Heading>
@@ -92,16 +92,16 @@ function ProductsPreview({ products }) {
         <Stack mt='6' spacing='3'>
           <Heading size='md'></Heading>
           <Accordion allowToggle>
-  <AccordionItem>
+  <AccordionItem >
     <h2>
       <AccordionButton>
-        <Box as="span" flex='1' textAlign='left'>
+        <Box as="span" flex='1' textAlign='left' >
           {item.product_name}
         </Box>
         <AccordionIcon />
       </AccordionButton>
     </h2>
-    <AccordionPanel pb={5}>
+    <AccordionPanel pb={5} >
    {item.product_description}
     </AccordionPanel>
   </AccordionItem>
