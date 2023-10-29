@@ -56,7 +56,7 @@ console.log(totalPrice)
         Total Price: ${totalPrice.toFixed(2)}
       </Text>
       <Box display={"flex"} justifyContent={'center'} marginTop={10}>
-      {checkOut? <Paypal/> :
+      {checkOut? <Paypal props={totalPrice}/> :
       <Button onClick={()=> setCheckOut(true)} colorScheme='teal'>
       Pay On Paypal
       </Button>}

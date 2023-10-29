@@ -1,11 +1,13 @@
 import { Button } from '@chakra-ui/react'
 import React, { useEffect, useRef } from 'react'
 
-export default function Paypal() {
+
+export default function Paypal({props}) {
 
     const paypal = useRef()
 
     useEffect(()=>{
+        console.log(props)
         window.paypal.Buttons({
             createOrder: (data, actions, err)=> {
                 return actions.order.create({
@@ -14,8 +16,8 @@ export default function Paypal() {
                         {
                             description:"perfume",
                             amount:{
-                                value:650.00,
-                                currency_code:"NIS"
+                                value:props,
+                                currency_code:"CAD"
                             }
                         }
                     ]
