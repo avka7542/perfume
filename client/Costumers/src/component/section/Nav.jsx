@@ -27,7 +27,7 @@ import ShoppingCart from "../common/ShoppingCart";
 
 
 function Nav() {
-  const url = "http://localhost:4000/categories/managers/all"
+  const url = `${import.meta.env.VITE_SERVER_URL}/categories/managers/all`
 
   const [data,loading,error] = useFetch(url)
   

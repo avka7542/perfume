@@ -41,7 +41,7 @@ import {
     const handleDeleteManager = async(managerId) => {
       try {
         await axios.delete
-        (`http://localhost:4000/users/delete-managers/${managerId}`);
+        (`${import.meta.env.VITE_SERVER_URL}/users/delete-managers/${managerId}`);
         setSendNewRequest(prev => !prev)
        
       } catch (error) {

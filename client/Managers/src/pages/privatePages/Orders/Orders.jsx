@@ -7,8 +7,8 @@ import { useContext } from "react";
 import { AuthContext } from "../../../context/AuthContext";
 
 
-const url = "http://localhost:4000/orders/managers/all"
-const editStatusUrl = "http://localhost:4000/orders/managers/update-status"
+const url = `${import.meta.env.VITE_SERVER_URL}/orders/managers/all`
+const editStatusUrl = `${import.meta.env.VITE_SERVER_URL}/orders/managers/update-status`
 
 function Orders() {
     const [data , loading , error] = useFetch(url);

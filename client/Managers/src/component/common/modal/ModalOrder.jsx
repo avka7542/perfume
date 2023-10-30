@@ -11,7 +11,7 @@ import axios from 'axios';
 import { useContext } from 'react';
 import { AuthContext } from '../../../context/AuthContext';
 
-const url = 'http://localhost:4000/orders/managers/delete-order'
+const url = `${import.meta.env.VITE_SERVER_URL}/orders/managers/delete-order`
 
 function ModalOrder({isOpen , onClose , order , changeStatus}) {
 

@@ -32,7 +32,7 @@ function UsersTable({ data }) {
   const handleDeleteUser = async(userId) => {
     try {
       await axios.delete
-      (`http://localhost:4000/users/delete-user-for-managers/${userId}`);
+      (`${import.meta.env.VITE_SERVER_URL}/users/delete-user-for-managers/${userId}`);
       setSendNewRequest(prev => !prev)
     } catch (error) {
       console.log(error)

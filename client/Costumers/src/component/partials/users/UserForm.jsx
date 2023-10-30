@@ -37,7 +37,7 @@ function userForm() {
       setLoading(true);
       const response = await axios({
         method: "post",
-        url:`http://localhost:4000/users/addCustomer`,
+        url:`${import.meta.env.VITE_SERVER_URL}/users/addCustomer`,
         data: values,
         headers: {
           "Content-Type": "application/json",

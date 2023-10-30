@@ -26,7 +26,7 @@ export default function AuthContextProvider({ children }) {
         setIsLoading(true);
         const response =
          await axios.post
-         ("http://localhost:4000/users/login"
+         (`${import.meta.env.VITE_SERVER_URL}/users/login`
          ,loginDetails);
          
          const data = response.data;

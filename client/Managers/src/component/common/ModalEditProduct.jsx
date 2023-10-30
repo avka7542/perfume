@@ -10,8 +10,8 @@ import AddProductForm from '../partials/products/AddProductForm';
 
 function ModalEditProduct({isOpen , onClose , product}) {
 
-    const editUrl = `http://localhost:4000/products/managers/update/${product?._id}`
-    const addUrl = `http://localhost:4000/products/managers/add`
+    const editUrl = `${import.meta.env.VITE_SERVER_URL}/products/managers/update/${product?._id}`
+    const addUrl = `${import.meta.env.VITE_SERVER_URL}/products/managers/add`
     return (
         <div>
             <Modal isOpen={isOpen} onClose={onClose}>

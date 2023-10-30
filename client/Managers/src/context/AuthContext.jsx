@@ -20,7 +20,7 @@ export default function AuthContextProvider({ children }) {
       try {
      
         const response = await axios.get(
-          "http://localhost:4000/users/managers/auth",
+          `${import.meta.env.VITE_SERVER_URL}/users/managers/auth`,
           {
             headers:{
               Authorization:`Bearer ${cookies.token}`
@@ -52,7 +52,7 @@ export default function AuthContextProvider({ children }) {
         setIsLoading(true);
         const response =
          await axios.post
-         ("http://localhost:4000/users/managers/login"
+         (`${import.meta.env.VITE_SERVER_URL}/users/managers/login`
          ,loginDetails,{
             headers: {
                 "Content-Type":"application/json"

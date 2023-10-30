@@ -16,8 +16,8 @@ import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { AuthContext } from "../../../context/AuthContext";
 
-const add_url = 'http://localhost:4000/categories/managers/add-category'
-const edit_url = 'http://localhost:4000/categories/managers/update-category'
+const add_url = `${import.meta.env.VITE_SERVER_URL}/categories/managers/add-category`
+const edit_url = `${import.meta.env.VITE_SERVER_URL}/categories/managers/update-category`
 
 function ModalCategories({ onClose, isOpen , category , setSendNewRequest}) {
 

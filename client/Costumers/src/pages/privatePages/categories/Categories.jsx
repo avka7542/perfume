@@ -2,8 +2,8 @@ import useFetch from "../../../hooks/useFetch";
 import CategoriesPreview from '../../../component/partials/categories/CategoriesPreview'
 import Nav from "../../../component/section/Nav";
 
-const url = "http://localhost:4000/products/managers/all"
-const url2 = "http://localhost:4000/categories/managers/all"
+const url = `${import.meta.env.VITE_SERVER_URL}/products/managers/all`
+const url2 = `${import.meta.env.VITE_SERVER_URL}/categories/managers/all`
 
 function Products() {
 

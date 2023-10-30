@@ -48,7 +48,7 @@ function ProductsTable({ products }) {
   const deleteProduct = async(id) => {
     try {
       await axios.delete
-      (`http://localhost:4000/products/managers/delete/${id}`);
+      (`${import.meta.env.VITE_SERVER_URL}/products/managers/delete/${id}`);
       setSendNewRequest(prev => !prev)
     } catch (error) {
       console.log(error)

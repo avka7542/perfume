@@ -31,7 +31,7 @@ function CategoriesTable({ data }) {
     async function deleteCategory(id){
       try {
         const response = await axios.delete(
-          `http://localhost:4000/categories/managers/delete-category/${id}`
+          `${import.meta.env.VITE_SERVER_URL}/categories/managers/delete-category/${id}`
         );
   
         if (!response.data.success) {

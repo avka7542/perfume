@@ -3,7 +3,7 @@ import useFetch from '../../../hooks/useFetch'
 import { Spinner } from '@chakra-ui/react'
 import CategoriesTable from '../../../component/partials/categories/CategoriesTable'
 
-const url = "http://localhost:4000/categories/managers/all"
+const url = `${import.meta.env.VITE_SERVER_URL}/categories/managers/all`
 
 function Categories() {
 

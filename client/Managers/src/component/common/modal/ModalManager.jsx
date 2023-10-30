@@ -18,8 +18,8 @@ export default function ModalManager( {isOpen, onClose ,toggleModal , managerId}
                         <ManagerForm
                         toggleModal={toggleModal}
                         requestMethod={toggleModal ? 'post' : 'put'}
-                        url={toggleModal ? "http://localhost:4000/users/add-managers"
-                         : `http://localhost:4000/users/update-managers/${managerId}`}
+                        url={toggleModal ? `${import.meta.env.VITE_SERVER_URL}/users/add-managers`
+                         : `${import.meta.env.VITE_SERVER_URL}/users/update-managers/${managerId}`}
                         onClose={onClose}/>
                     </ModalBody>
                 </ModalContent>

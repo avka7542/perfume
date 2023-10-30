@@ -19,7 +19,7 @@ function ModalUser({ isOpen, onClose ,toggleModal , userId}) {
                         <UserForm
                         toggleModal={toggleModal}
                         requestMethod={'put'}
-                        url={`http://localhost:4000/users/update-user-for-managers/${userId}`}
+                        url={`${import.meta.env.VITE_SERVER_URL}/users/update-user-for-managers/${userId}`}
                         onClose={onClose}/>
                     </ModalBody>
                 </ModalContent>

@@ -3,7 +3,7 @@ import useFetch from "../../../hooks/useFetch";
 import ProductsTable from "../../../component/partials/products/ProductsTable";
 
 
-const url = "http://localhost:4000/products/managers/all"
+const url = `${import.meta.env.VITE_SERVER_URL}/products/managers/all`
 
 function Products() {
 

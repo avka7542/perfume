@@ -12,7 +12,7 @@ import {
 import { useEffect, useState } from 'react';
 import useFetch from '../../../hooks/useFetch';
 
-const url = 'http://localhost:4000/categories/managers/all'
+const url = `${import.meta.env.VITE_SERVER_URL}/categories/managers/all`
 
 function SelectCategory({chosenCategories ,setChosenCategories, values ,setValues}) {
   

@@ -28,7 +28,7 @@ const LoginForm = () => {
 
     try {
       // Send the form data to the server using Axios
-      const response = await axios.post('http://localhost:4000/login', formData);
+      const response = await axios.post(`${import.meta.env.VITE_SERVER_URL}/login`, formData);
 
       // Handle the response as needed
       if (response.status === 200) {

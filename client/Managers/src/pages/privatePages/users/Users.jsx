@@ -2,7 +2,7 @@ import useFetch from '../../../hooks/useFetch';
 import { useState, useEffect } from "react";
 import UsersTable from "../../../component/partials/users/usersTable";
 
-const users_url = "http://localhost:4000/users/customers-for-managers";
+const users_url = `${import.meta.env.VITE_SERVER_URL}/users/customers-for-managers`
 
 
 function Users() {
