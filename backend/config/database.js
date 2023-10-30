@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const connection = async() =>{
 
-    let url = process.env.MONGO_URI || "mongodb+srv://avka7542:Avner2702@cluster0.ftoyvbt.mongodb.net/master";
+    let url = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/master";
 
     try {
         
